@@ -5,16 +5,16 @@
   <xacro:include filename="$(find p2os_urdf)/defs/pioneer3dx_body.xacro"/>
 
   <!-- Front Laser -->
-  <xacro:property name="laser_name" value="front_laser"/>
-  <xacro:property name="parent_link" value="base_link"/>
-  <xacro:property name="frame_id" value="pioneer/front_laser"/>
+  <xacro:property name="laser_name" value="$(arg ns)/front_laser"/>
+  <xacro:property name="parent_link" value="$(arg ns)/base_link"/>
+  <xacro:property name="frame_id" value="$(arg ns)/front_laser"/>
   <xacro:property name="xyz" value="0.1 0 0.3"/>
   <xacro:property name="rpy" value="0 0 0"/>
-  <xacro:property name="publish_topic" value="pioneer/front_laser"/>
+  <xacro:property name="publish_topic" value="$(arg ns)/front_laser"/>
   <xacro:property name="scan_angle" value="2.36"/>
   <xacro:include filename="$(find ariac_environment)/models/hokuyo/hokuyo.xacro"/>
 
-  <!-- Back Laser -->
+  <!-- Back Laser
   <xacro:property name="laser_name" value="back_laser"/>
   <xacro:property name="parent_link" value="base_link"/>
   <xacro:property name="frame_id" value="pioneer/back_laser"/>
@@ -22,6 +22,6 @@
   <xacro:property name="rpy" value="0 0 3.14"/>
   <xacro:property name="publish_topic" value="pioneer/back_laser"/>
   <xacro:property name="scan_angle" value="2.36"/>
-  <xacro:include filename="$(find ariac_environment)/models/hokuyo/hokuyo.xacro"/>
+  <xacro:include filename="$(find ariac_environment)/models/hokuyo/hokuyo.xacro"/> -->
 
 </robot>
