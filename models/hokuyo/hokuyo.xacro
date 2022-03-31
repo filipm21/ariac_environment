@@ -19,7 +19,7 @@
   </link>
   <gazebo reference="${laser_name}">
 	<sensor name="${laser_name}" type="ray">
-	  <visualize>true</visualize>
+	  <visualize>false</visualize>
 	  <ray>
 	    <scan>
 	      <horizontal>
